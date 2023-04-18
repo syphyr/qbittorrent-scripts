@@ -2,7 +2,7 @@
 
 BUILD="$(pwd)"
 
-export DESTDIR=../../debian/qbittorrent
+export DESTDIR=../debian/qbittorrent
 
 case "$PKG_CONFIG_PATH" in
   '')
