@@ -1,0 +1,35 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+#cd /usr/bin
+#sudo ln -sfv python3.8 python3
+#cd $BUILD
+#python3 --version
+
+#export PATH="$BUILD"/build_libs/bin:$PATH
+#export BOOST_BUILD_PATH="$BUILD"/boost/boost_1_82_0/tools/build
+#export BOOST_ROOT="$BUILD"/boost/boost_1_82_0
+#export QT_SELECT=qt6
+export DESTDIR=../../debian/qbittorrent
+
+#python3 -m pip install "$BUILD"/tools/ninja-1.11.1-py2.py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+#python3 -m pip install "$BUILD"/tools/cmake-3.26.3-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+
+case "$PKG_CONFIG_PATH" in
+  '')
+    export PKG_CONFIG_PATH="$BUILD/build_libs/lib/pkgconfig"
+    ;;
+  *)
+    export PKG_CONFIG_PATH="$BUILD/build_libs/lib/pkgconfig:$PKG_CONFIG_PATH"
+    ;;
+esac
+
+cd "$BUILD"/qBittorrent
+cmake --install build
+
+#python3 -m pip uninstall -y ninja
+#python3 -m pip uninstall -y cmake
+
+#cd /usr/bin
+#sudo ln -sfv python3.6 python3

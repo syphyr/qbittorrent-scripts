@@ -1,0 +1,29 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+#cd /usr/bin
+#sudo ln -sfv python3.8 python3
+#cd $BUILD
+#python3 --version
+
+#export PATH="$BUILD"/build_libs/bin:$PATH
+#export BOOST_BUILD_PATH="$BUILD"/boost/boost_1_82_0/tools/build
+#export BOOST_ROOT="$BUILD"/boost/boost_1_82_0
+
+#python3 -m pip install "$BUILD"/tools/ninja-1.11.1-py2.py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+#python3 -m pip install "$BUILD"/tools/cmake-3.26.3-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+
+#b2 --version
+#ninja --version
+#cmake --version
+
+cd "$BUILD"/libtorrent
+#b2 cxxstd=17 variant=release link=static runtime-link=static debug-symbols=off install --prefix="$BUILD"/build_libs
+cmake -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17 -Dstatic_runtime=on -DBUILD_SHARED_LIBS=off -DCMAKE_INSTALL_PREFIX="$BUILD/build_libs"
+
+#python3 -m pip uninstall -y ninja
+#python3 -m pip uninstall -y cmake
+
+#cd /usr/bin
+#sudo ln -sfv python3.6 python3

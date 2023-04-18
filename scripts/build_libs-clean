@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -rf build_libs
+mkdir build_libs

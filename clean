@@ -1,0 +1,6 @@
+#!/bin/sh
+export LC_ALL=C
+
+scripts/build_libs-clean
+scripts/libtorrent-clean
+scripts/qbittorrent-clean

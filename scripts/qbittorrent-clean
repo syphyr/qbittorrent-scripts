@@ -1,0 +1,6 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+cd "$BUILD"/qBittorrent
+git clean -fdx

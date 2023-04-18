@@ -1,0 +1,15 @@
+/boost
+/build_libs
+/libtorrent
+/qBittorrent
+*.deb
+*.ddeb
+
+/debian/.debhelper
+/debian/changelog
+/debian/files
+/debian/qbittorrent
+/debian/qbittorrent.debhelper.log
+/debian/qbittorrent.postinst.debhelper
+/debian/qbittorrent.postrm.debhelper
+/debian/qbittorrent.substvars

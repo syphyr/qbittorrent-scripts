@@ -1,0 +1,25 @@
+From 525b4dd854433917551ea3caa116aff1332a0618 Mon Sep 17 00:00:00 2001
+From: syphyr <syphyr@gmail.com>
+Date: Tue, 18 Apr 2023 02:56:03 +0200
+Subject: [PATCH] Fix cpp-8 linking stdc++fs
+
+---
+ src/base/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/base/CMakeLists.txt b/src/base/CMakeLists.txt
+index 15929773c..a9d44d1d7 100644
+--- a/src/base/CMakeLists.txt
++++ b/src/base/CMakeLists.txt
+@@ -190,7 +190,7 @@ add_library(qbt_base STATIC
+ target_link_libraries(qbt_base
+     PRIVATE
+         OpenSSL::Crypto OpenSSL::SSL
+-        ZLIB::ZLIB
++        ZLIB::ZLIB stdc++fs
+     PUBLIC
+         LibtorrentRasterbar::torrent-rasterbar
+         Qt::Core Qt::Network Qt::Sql Qt::Xml
+-- 
+2.17.1
+

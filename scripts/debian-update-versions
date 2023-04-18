@@ -1,0 +1,23 @@
+#!/bin/sh
+
+get_version()
+{
+    (
+        cd $1 > /dev/null
+        VERSION=1:$(git describe --tags --always | sed -e 's/^[^0-9]*//' -e 's/\^0$//')
+        if [ "$VERSION" = "1:" ]; then
+            TIMESTAMP=$(git log -1 --date=short --format=%cd | sed 's/-/./g')
+            COMMIT=$(git rev-parse --short HEAD)
+            VERSION="2:${TIMESTAMP}.${COMMIT}"
+        fi
+        echo ${VERSION}
+    )
+}
+
+do_subst() {
+    sed  -e "0,/^qBittorrent (.*)/s/(.*)/($1)/" \
+         -e "s/^  \* local build.*/  \* local build with libtorrent $2/" \
+         -e "s/\(^ -- Local User <localuser@localhost>\).*/\1  $(date -R)/" debian/changelog.TEMPLATE > debian/changelog
+}
+
+do_subst $(get_version qBittorrent) $(get_version libtorrent)
