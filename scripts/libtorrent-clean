@@ -4,3 +4,4 @@ BUILD="$(pwd)"
 
 cd "$BUILD"/libtorrent
 git clean -fdx
+git reset --hard

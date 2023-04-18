@@ -4,3 +4,4 @@ BUILD="$(pwd)"
 
 cd "$BUILD"/qBittorrent
 git clean -fdx
+git reset --hard
