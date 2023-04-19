@@ -41,7 +41,7 @@ libtorrent_build: libtorrent_config
 	scripts/libtorrent-build
 
 # drop the local/ since it's package managed now
-override_dh_auto_configure: libtorrent_build boost_build changelog_build
+override_dh_auto_configure: libtorrent_build
 	scripts/qbittorrent-config
 
 override_dh_auto_build:
