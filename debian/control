@@ -6,9 +6,9 @@ Standards-Version: 3.9.3
 Build-Depends:
  autoconf,
  automake,
- gcc-8,
- g++-8,
- cpp-8,
+ gcc-8 | gcc-9,
+ g++-8 | g++-9,
+ cpp-8 | cpp-9,
  debhelper (>= 7),
  qt6-base-dev,
  qt6-tools-dev,
