@@ -2,7 +2,8 @@
 
 #git clone --recurse-submodules https://github.com/arvidn/libtorrent
 cd libtorrent
-#git checkout master
-git checkout RC_2_0
+git checkout master
+#git checkout RC_2_0
 git fetch
 git submodule update --init --recursive
+git rebase

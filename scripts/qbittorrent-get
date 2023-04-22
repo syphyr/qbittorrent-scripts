@@ -3,4 +3,5 @@
 #git clone https://github.com/qbittorrent/qBittorrent
 cd qBittorrent
 git checkout master
-git fetch 
+git fetch
+git rebase
