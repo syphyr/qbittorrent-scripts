@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Configuring qBittorrent"
+echo ""
+
 case "$PKG_CONFIG_PATH" in
   '')
     export PKG_CONFIG_PATH="$BUILD/build_libs/lib/pkgconfig"

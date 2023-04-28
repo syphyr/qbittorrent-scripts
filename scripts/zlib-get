@@ -1,6 +1,11 @@
 #!/bin/sh
 
 #git clone https://github.com/madler/zlib
+
+echo ""
+echo "Updating zlib"
+echo ""
+
 cd zlib
 
 git fetch

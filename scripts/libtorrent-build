@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Building and installing libtorrent"
+echo ""
+
 cd "$BUILD"/libtorrent
 
 cmake --build build

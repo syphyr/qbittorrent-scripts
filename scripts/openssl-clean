@@ -2,7 +2,12 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Cleaning openssl directory"
+echo ""
+
 cd "$BUILD"/openssl
+
 git clean -fdx
 git submodule foreach --recursive git clean -xfd
 git reset --hard

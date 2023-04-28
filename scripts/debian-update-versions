@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo ""
+echo "Generating debian changelog"
+echo ""
+
 get_version()
 {
     (

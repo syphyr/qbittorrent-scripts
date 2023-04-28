@@ -1,4 +1,8 @@
 #!/bin/sh
 
+echo ""
+echo "Removing build_libs"
+echo ""
+
 rm -rf build_libs
 mkdir build_libs

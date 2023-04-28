@@ -1,6 +1,11 @@
 #!/bin/sh
 
 #git clone --recurse-submodules https://github.com/arvidn/libtorrent
+
+echo ""
+echo "Updating libtorrent"
+echo ""
+
 cd libtorrent
 #git checkout master
 #git checkout RC_2_0

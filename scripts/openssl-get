@@ -1,7 +1,13 @@
 #!/bin/sh
 
 #git clone --recurse-submodules https://github.com/openssl/openssl.git
+
+echo ""
+echo "Updating openssl"
+echo ""
+
 cd openssl
+
 git fetch
 git submodule update --init --recursive
 git rebase

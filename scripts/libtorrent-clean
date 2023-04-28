@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Cleaning libtorrent directory"
+echo ""
+
 cd "$BUILD"/libtorrent
 git clean -fdx
 git submodule foreach --recursive git clean -xfd

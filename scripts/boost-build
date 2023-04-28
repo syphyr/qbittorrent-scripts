@@ -3,24 +3,39 @@
 BUILD="$(pwd)"
 
 if [ ! -f ~/user-config.jam ]; then
+	echo ""
+	echo "Creating boost config file"
+	echo ""
 	echo "using gcc ;" >>~/user-config.jam
 fi
 
 if [ ! -d "$BUILD"/boost ]; then
+	echo ""
+	echo "Creating boost directory"
+	echo ""
 	mkdir "$BUILD"/boost
 fi
 
 if [ ! -f "$BUILD"/boost/boost_1_82_0.tar.bz2 ]; then
+	echo ""
+	echo "Downloading boost files"
+	echo ""
 	cd "$BUILD"/boost
 	wget https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2
 fi
 
 if [ ! -d "$BUILD"/boost/boost_1_82_0/tools/build ]; then
+	echo ""
+	echo "Extracting boost files"
+	echo ""
 	cd "$BUILD"/boost
 	tar -jxf boost_1_82_0.tar.bz2
 fi
 
 if [ ! -f "$BUILD"/build_libs/bin/b2 ]; then
+	echo ""
+	echo "Installing boost files"
+	echo ""
 	cd "$BUILD"/boost/boost_1_82_0/tools/build
 	./bootstrap.sh
 	./b2 install --prefix="$BUILD"/build_libs

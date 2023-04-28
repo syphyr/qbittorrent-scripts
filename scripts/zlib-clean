@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Cleaning zlib directory"
+echo ""
+
 cd "$BUILD"/zlib
 
 git clean -fdx

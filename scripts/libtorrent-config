@@ -2,5 +2,9 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Configuring libtorrent"
+echo ""
+
 cd "$BUILD"/libtorrent
 cmake -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17 -Dstatic_runtime=on -DBUILD_SHARED_LIBS=off -DCMAKE_INSTALL_PREFIX="$BUILD/build_libs"

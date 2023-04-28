@@ -1,6 +1,11 @@
 #!/bin/sh
 
 #git clone https://github.com/qbittorrent/qBittorrent
+
+echo ""
+echo "Updating qBittorrent"
+echo ""
+
 cd qBittorrent
 #git checkout master
 git fetch

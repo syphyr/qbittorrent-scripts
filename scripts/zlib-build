@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Building and installing zlib"
+echo ""
+
 cd "$BUILD"/zlib
 
 make

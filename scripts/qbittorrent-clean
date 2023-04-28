@@ -2,6 +2,11 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Cleaning qBittorrent directory"
+echo ""
+
 cd "$BUILD"/qBittorrent
+
 git clean -fdx
 git reset --hard

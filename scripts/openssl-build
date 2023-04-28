@@ -2,6 +2,10 @@
 
 BUILD="$(pwd)"
 
+echo ""
+echo "Building and installing openssl"
+echo ""
+
 cd "$BUILD"/openssl
 
 make
