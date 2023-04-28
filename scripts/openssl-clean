@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+cd "$BUILD"/openssl
+git clean -fdx
+git submodule foreach --recursive git clean -xfd
+git reset --hard
+git submodule foreach --recursive git reset --hard

@@ -4,6 +4,7 @@ export LC_ALL=C
 scripts/build_libs-clean
 scripts/libtorrent-clean
 scripts/qbittorrent-clean
+scripts/openssl-clean
 
 cd debian
 git clean -fdx

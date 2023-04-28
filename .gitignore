@@ -1,7 +1,9 @@
 /boost
 /build_libs
 /libtorrent
+/openssl
 /qBittorrent
+
 *.deb
 *.ddeb
 

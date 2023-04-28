@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+cd "$BUILD"/openssl
+
+make
+make install DESTDIR="$BUILD/build_libs"
