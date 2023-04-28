@@ -4,3 +4,4 @@ export LC_ALL=C
 scripts/libtorrent-get
 scripts/qbittorrent-get
 scripts/openssl-get
+scripts/zlib-get

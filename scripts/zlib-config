@@ -1,0 +1,16 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+case "$PKG_CONFIG_PATH" in
+  '')
+    export PKG_CONFIG_PATH="$BUILD/build_libs/lib/pkgconfig"
+    ;;
+  *)
+    export PKG_CONFIG_PATH="$BUILD/build_libs/lib/pkgconfig:$PKG_CONFIG_PATH"
+    ;;
+esac
+
+cd "$BUILD"/zlib
+
+./configure --prefix=/ --static

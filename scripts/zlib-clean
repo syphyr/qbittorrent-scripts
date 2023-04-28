@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+cd "$BUILD"/zlib
+
+git clean -fdx
+git reset --hard

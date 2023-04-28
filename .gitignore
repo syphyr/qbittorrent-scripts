@@ -3,6 +3,7 @@
 /libtorrent
 /openssl
 /qBittorrent
+/zlib
 
 *.deb
 *.ddeb

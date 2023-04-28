@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BUILD="$(pwd)"
+
+cd "$BUILD"/zlib
+
+make
+make install DESTDIR="$BUILD/build_libs"
