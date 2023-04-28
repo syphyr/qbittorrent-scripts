@@ -34,7 +34,19 @@ changelog_build:
 boost_build: changelog_build
 	scripts/boost-build
 
-libtorrent_config: boost_build
+zlib_config: boost_build
+	scripts/zlib-config
+
+zlib_build: zlib_config
+	scripts/zlib-build
+
+openssl_config: zlib_build
+	scripts/openssl-config
+
+openssl_build: openssl_config
+	scripts/openssl-build
+
+libtorrent_config: openssl_build
 	scripts/libtorrent-config
 
 libtorrent_build: libtorrent_config
