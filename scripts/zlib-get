@@ -1,6 +1,8 @@
 #!/bin/sh
 
-#git clone https://github.com/madler/zlib
+if [ ! -d zlib ]; then
+	git clone https://github.com/madler/zlib
+fi
 
 echo ""
 echo "Updating zlib"

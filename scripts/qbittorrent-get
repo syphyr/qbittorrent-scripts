@@ -1,6 +1,8 @@
 #!/bin/sh
 
-#git clone https://github.com/qbittorrent/qBittorrent
+if [ ! -d qBittorrent ]; then
+	git clone https://github.com/qbittorrent/qBittorrent
+fi
 
 echo ""
 echo "Updating qBittorrent"

@@ -1,6 +1,8 @@
 #!/bin/sh
 
-#git clone --recurse-submodules https://github.com/openssl/openssl.git
+if [ ! -d openssl ]; then
+	git clone --recurse-submodules https://github.com/openssl/openssl.git
+fi
 
 echo ""
 echo "Updating openssl"

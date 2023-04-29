@@ -1,6 +1,8 @@
 #!/bin/sh
 
-#git clone --recurse-submodules https://github.com/arvidn/libtorrent
+if [ ! -d libtorrent ]; then
+	git clone --recurse-submodules https://github.com/arvidn/libtorrent
+fi
 
 echo ""
 echo "Updating libtorrent"
