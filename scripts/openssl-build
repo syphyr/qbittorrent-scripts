@@ -9,4 +9,4 @@ echo ""
 cd "$BUILD"/openssl
 
 make
-make install DESTDIR="$BUILD/build_libs"
+make install_sw DESTDIR="$BUILD/build_libs"
