@@ -17,4 +17,4 @@ esac
 
 cd "$BUILD"/openssl
 
-./config --prefix=/ --openssldir=/usr/lib/ssl --libdir=lib no-shared
+./Configure --prefix=/ --openssldir=/usr/lib/ssl --libdir=lib no-shared no-idea no-mdc2 no-rc5 no-zlib no-ssl3 no-ssl3-method enable-rfc3779 enable-cms no-capieng enable-ec_nistp_64_gcc_128
