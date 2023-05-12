@@ -2,9 +2,8 @@
 export LC_ALL=C
 
 BUILD=$( pwd )
-cd /usr/bin
-sudo ln -sfv python3.8 python3
-cd $BUILD
+
+sudo update-alternatives --set python3 /usr/bin/python3.8
 
 python3 --version
 
@@ -34,5 +33,4 @@ sudo update-alternatives --auto cpp
 python3 -m pip uninstall -y ninja
 python3 -m pip uninstall -y cmake
 
-cd /usr/bin
-sudo ln -sfv python3.6 python3
+sudo update-alternatives --auto python3
