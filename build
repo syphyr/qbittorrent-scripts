@@ -3,7 +3,7 @@ export LC_ALL=C
 
 BUILD=$( pwd )
 
-sudo update-alternatives --set python3 /usr/bin/python3.8
+sudo update-alternatives --set python3 /usr/bin/python3.9
 
 python3 --version
 
