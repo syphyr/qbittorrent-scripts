@@ -11,5 +11,5 @@ echo ""
 cd openssl
 
 git fetch
-git submodule update --init --recursive
+git submodule update --init --recursive --rebase
 git rebase
