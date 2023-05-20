@@ -6,3 +6,4 @@ echo ""
 
 rm -rf build_libs
 mkdir build_libs
+rm ~/user-config.jam
