@@ -12,8 +12,8 @@ export BOOST_BUILD_PATH="$BUILD"/boost/boost_1_82_0/tools/build
 export BOOST_ROOT="$BUILD"/boost/boost_1_82_0
 export QT_SELECT=qt6
 
-python3 -m pip install "$BUILD"/tools/ninja-1.11.1-py2.py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
-python3 -m pip install "$BUILD"/tools/cmake-3.26.3-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+python3 -m pip install --user "$BUILD"/tools/ninja-1.11.1-py2.py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+python3 -m pip install --user "$BUILD"/tools/cmake-3.26.3-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
 
 b2 --version
 ninja --version
