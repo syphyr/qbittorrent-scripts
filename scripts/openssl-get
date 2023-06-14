@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ ! -d openssl ]; then
-	git clone --recurse-submodules https://github.com/openssl/openssl.git
+	git clone --branch openssl-3.0 --recurse-submodules https://github.com/openssl/openssl.git
 fi
 
 echo ""
