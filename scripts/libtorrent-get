@@ -14,3 +14,4 @@ cd libtorrent
 git fetch
 git submodule update --init --recursive --rebase
 git rebase
+git log --pretty="%C(yellow)%h %C(green)(%cr) %C(red)(%ar) %C(white)%s %C(blue)(%an)" -10 origin/master
