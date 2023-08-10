@@ -9,7 +9,7 @@ echo "Updating qBittorrent"
 echo ""
 
 cd qBittorrent
-#git checkout master
+#git checkout v4_6_x
 git fetch
 git rebase
-git log --pretty="%C(yellow)%h %C(green)(%cr) %C(red)(%ar) %C(white)%s %C(blue)(%an)" -10 origin/master
+git log --pretty="%C(yellow)%h %C(green)(%cr) %C(red)(%ar) %C(white)%s %C(blue)(%an)" -10 origin/v4_6_x
