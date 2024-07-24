@@ -19,12 +19,11 @@ Build-Depends:
 Package: qbittorrent
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: bittorrent client based on libtorrent-rasterbar (without X support)
+Description: bittorrent client based on libtorrent-rasterbar
  BitTorrent client written in C++ and based on libtorrent-rasterbar.
- qBittorrent-nox is a version of qBittorrent (Qt5 application) that does not
- require X and can be controlled via a WebUI, thus is more suitable for headless
- servers. It is a feature rich but lightweight client that is very similar to
- rTorrent. Its main features are:
+ qBittorrent (Qt6 application) requires X and can be controlled via
+ a WebUI. It is a feature rich but lightweight client that is very
+ similar to rTorrent. Its main features are:
  .
   * Remote control through a Web user interface
   * Vuze-compatible protocol encryption
